@@ -885,6 +885,40 @@
   .blitz-opt.right{background:#DCFCE7;border-color:#16A34A}
   .blitz-opt.wrong{background:#FEE2E2;border-color:#DC2626}
   .blitz-opt:disabled{cursor:default}
+  .search-fab{position:fixed;bottom:14px;inset-inline-start:12px;z-index:60;min-width:56px;min-height:56px;border-radius:50%;border:3px solid #5B7FFF;background:#fff;font-size:24px;cursor:pointer;box-shadow:0 4px 14px rgba(91,127,255,.35);line-height:1;padding:0}
+  .search-fab:active{transform:scale(.92)}
+  .bg-pdf{display:block;text-align:center;font-weight:900;font-size:15px;color:#1D4ED8;background:#EFF6FF;border:2.5px solid #93C5FD;border-radius:14px;padding:12px;margin:0 0 14px;text-decoration:none;min-height:44px;box-sizing:border-box}
+  .bg-pdf:hover{background:#DBEAFE}
+  .roadmap{margin-top:16px}
+  .roadmap-list{list-style:none;padding:0;margin:0}
+  .roadmap-list li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 4px;border-bottom:1.5px dashed #E2E8F0;font-weight:800;font-size:14.5px;color:#1E293B;flex-wrap:wrap}
+  .roadmap-list li span{font-size:12px;color:#64748B;font-weight:700}
+  .roadmap-note{font-size:12.5px;color:#64748B;text-align:center;font-weight:700;margin:10px 0 0}
+  /* ---- מדרגות למידה בעולמות הצעירים: מ-0 לידע דרך משחק ---- */
+  .world.early{display:flex;flex-direction:column}
+  .world.early>*{order:50}
+  .world.early>.world-head,.world.early>h1,.world.early>.back,.world.early>a{order:0}
+  .world.early>.card.intro{order:1}
+  .world.early>.card.blitz-card{order:2}
+  .world.early>.clip-card{order:3}
+  .world.early>.card.lab{order:4}
+  .world.early>.card.game-card{order:5}
+  .world.early>.card.tower-card{order:6}
+  .world.early>.card.drill-card{order:7}
+  .world.early>.card.illustrated{order:8}
+  .world.early>.card.quiz{order:9}
+  .world.early>.card.lessons{order:10}
+  .world.early>.card.practice{order:11}
+  .world.early>.card.parents-card{order:12}
+  .world.early>.card.goals{display:none}
+  .world.early .card.lessons>h2::after{content:' · לְמִי שֶׁרוֹצֶה עוֹד'}
+  .world.early .lesson.kid .kid-more{display:none}
+  .world.early .blitz-card h2::before{content:'\2460  '}
+  .world.early .clip-card h2::before{content:'\2461  '}
+  .world.early .card.lab h2::before{content:'\2462  '}
+  .world.early .game-card h2::before{content:'\2463  '}
+  .world.early .tower-card h2::before{content:'\2464  '}
+  .world.early .card.quiz h2::before{content:'\2465  '}
 </style>
 </head>
 <body>
@@ -1457,6 +1491,57 @@ window.BAGRUT = {
       code: '35571', nick: 'שאלון 571', level: '5 יח״ל · שאלון ראשון',
       years: [
         {
+          year: 'קיץ תשפ״ב (2022) · מועד א',
+          pdf: 'https://files.geva.co.il/geva_website/uploads/2022/05/35571-%D7%A4%D7%AA%D7%A8%D7%95%D7%9F-%D7%9E%D7%95%D7%A2%D7%93-%D7%90.pdf',
+          status: 'ready',
+          questions: [
+            {n:'1',topic:'הוכחות · חשיבה כמותית',brief:'חלוקת 4\u207F−1 ב־3; מציאת p כך ש־4\u207F\u207A\u00B9+p מתחלק ב־12; זיהוי גרף נגזרת; פונקציית שטח מצטבר; זוויות משיקים.',steps:[
+'א. 4\u207F−1=(2\u207F−1)(2\u207F+1) — מבין שלושת העוקבים 2\u207F−1, 2\u207F, 2\u207F+1 אחד מתחלק ב־3, ו־2\u207F אינו (חזקת 2) — לכן אחד האי־זוגיים מתחלק ב־3, וכך המכפלה. (חלופה: אינדוקציה — בסיס n=1: 3/3; צעד: (4\u1D4F\u207A\u00B9−1)/3=4·(4\u1D4F−1)/3+1.)',
+'ב. 4\u207F\u207A\u00B9+p=4(4\u207F−1)+(4+p): האגף השמאלי מתחלק ב־12 (סעיף א ×4), ולכן דרוש 12|(4+p) ⟵ p=8 (ובאופן כללי p=8+12t).',
+'ג. f(x)=(2−1/x)\u00B3: f\u2032→0 בשני הקצוות (אסימפטוטה y=0 לנגזרת) ותבנית עלייה/ירידה כפולה ⟵ גרף ג; ל־f שתי נקודות פיתול.',
+'ד. h(t)=∫₀\u1D57f: צבירת שטחים מהסרטוט — h(0)=0, h(3)=7 (טרפז+משולשים), h(5)=7−2=5; מקסימום ב־t=3 עם ערך 7 (מעבר מחיובי לשלילי).',
+'ה. זווית בין משיק למיתר: ∠E=∠D=2α ומסכום זוויות במשולש DEF: ∠F=180°−4α.']},
+            {n:'2',topic:'סדרות הנדסיות אינסופיות',brief:'סדרה I עם מנה 9r² (0<r<⅓); דוחסים איבר בין כל שניים ⟵ סדרה II; סכומים והתכנסות.',steps:[
+'א(1). 0<r<⅓ ⟵ 0<9r²<1 ⟵ I מתכנסת. (2) b₁=a₁, b₃=a₂ ⟵ q\u00B2=9r² ⟵ q=3r (חיובי, אחרת סירוגי־סימן ולא יורדת) — וגם II מתכנסת.',
+'ב. S_II=(4/3)S_I: a₁/(1−3r)=(4/3)·a₁/(1−9r²) ⟵ 3(1+3r)=4 ⟵ r=1/9 ⟵ q=1/3.',
+'ג. איברי המקומות הזוגיים: סדרה הנדסית עם איבר ראשון b₁/3 ומנה 1/9 ⟵ (b₁/3)/(8/9)=12 ⟵ b₁=32. מקומות כפולת 5: איבר ראשון b₅=32/81, מנה 1/243 ⟵ S=(32/81)·(243/242)=48/121.',
+'ד. סכום הזנב אחרי האיבר החמישי: b₆/(1−⅓)=1.5b₆ ⟵ היחס b₅/(1.5b₆)=1/(1.5q)=2.',
+'ה. באופן כללי: cₙ/(cₙ₊₁/(1−q))=(1−q)/q — קבוע, בלתי־תלוי במקום האיבר.']},
+            {n:'3',topic:'הסתברות · בינומית ומותנית',brief:'הפסד p, ניצחון 3p; נתון שסיכוי לנצח לפחות פעם בשני משחקים הוא 4.5p; חמישה משחקים.',steps:[
+'א. 1−(1−3p)\u00B2=4.5p ⟵ 6p−9p²=4.5p ⟵ p=1/6 (ניצחון ½, תיקו ⅓).',
+'ב. Bin(5, ½), P(X≥3)=[C(5,3)+C(5,4)+C(5,5)]/32=16/32=0.5.',
+'ג. ניצחון בשלושת הראשונים: 0.5³=0.125.',
+'ד(1). אי־הפסד במשחק: 5/6 ⟵ (5/6)⁵=3125/7776. (2) מותנה בהפסד־לפחות־אחד: המסלול היחיד המתאים הוא נצ׳×3, הפסד, תיקו: (½)³·(1/6)·(1/3)=1/144; חלקי 1−3125/7776=4651/7776 ⟵ 54/4651.']},
+            {n:'4',topic:'גאומטריה — מעגל, דמיון והוכחה',brief:'מעגל ברדיוס R, קוטר DC, משיק AB, AG=8; הוכחות דמיון, מציאת R ויחס שטחים.',steps:[
+'א. ∠DBC=90° (היקפית על קוטר); ∠ADB=∠ABC=α (משיק־מיתר); מסכומי זוויות: ∠G=90°−2α (ב־ADG) ו־∠GAB=2α.',
+'ב. ∆ABC∼∆ADB (זווית משותפת A וזוויות α) ⟵ AD/AB=AB/AC=DB/BC.',
+'ג. עם AC=2AD... הנתון AC=½DC·? ⟵ AD=√3·R; מ־AG=AB=8 (שוקיים ב־GAB) ומהדמיון: 8²=AD·(AD−?) ⟵ R=8/√3.',
+'ד. ∆ADG∼∆BDC (זווית D משותפת, ∠GAD=∠DBC=90°); DG=√(8²+(8√3)²)=16, DC=16/√3 ⟵ יחס דמיון √3 ⟵ יחס שטחים 3 ⟵ S_ADG=3S.']},
+            {n:'5',topic:'טריגונומטריה במישור — משפטי סינוסים וקוסינוסים',brief:'מעגל ברדיוס R; BD מול זווית α; BC=R, CD=R√2; מציאת α, ∠ABD, ויחס גבהים.',steps:[
+'א. משפט הסינוסים במעגל: BD=2R·sinα.',
+'ב. במרובע חסום ∠BCD=180°−α; קוסינוסים ב־BDC: 4R²sin²α=R²+2R²+2√2R²cosα ⟵ 4(1−cos²α)=3+2√2cosα ⟵ cosα=(√6−√2)/4 ⟵ α=75° (הפתרון 165° נפסל: אין מקום לשתי קהות).',
+'ג. סינוסים ב־BDC עם ∠BCD=105°: sin∠CBD=CD·sin105°/BD=…=√2/2 ⟵ ∠CBD=45° ⟵ ∠ABD=45° (135° נפסלת).',
+'ד. BD משותפת ל־ABD ול־BOD ⟵ יחס הגבהים = יחס השטחים; ∠ADB=60°, ∠BOD=150° (מרכזית) ⟵ h₁/h₂=S_ABD/S_BOD=(3+√3)/3.']},
+            {n:'6',topic:'חדו״א — פונקציה רציונלית ואינטגרלים',brief:'f(x)=2x+2/x: זוגיות, קיצון, זיהוי גרפים של f, f\u2032 ו־g=f·f\u2032; שטחים ואינטגרל פרמטרי.',steps:[
+'א. תחום x≠0; f(−x)=−f(x) — אי־זוגית; f\u2032=2−2/x² מתאפסת ב־x=±1 ⟵ מינימום (1,4), מקסימום (−1,−4); עולה ב־|x|>1, יורדת ב־0<|x|<1 (ובסימטריה).',
+'ב. מהסימנים והאסימפטוטות: גרף I=g, גרף II=f, גרף III=f\u2032.',
+'ג. g=f·f\u2032 מתאפסת כש־f\u2032=0 (f≠0 שם): (1,0) ו־(−1,0).',
+'ד. ∫f·f\u2032=[f²/2]: S₁=½(f(4)²−f(1)²)... בין x=¼ ל־4 בשני חלקים סימטריים ⟵ 28.125+28.125=56.25.',
+'ה. ∫ מ־1/a עד a של g: ½(f(a)²−f(1/a)²)=0 כי f(1/a)=2/a+2a=f(a).',
+'ו. h(x)=∫₁ˣf\u2032=f(x)−4 בתחום x≥1: f\u2032≥0 שם ⟵ מינימום בקצה (1,0).']},
+            {n:'7',topic:'חדו״א — פונקציה טריגונומטרית',brief:'f(x)=(2cos²x+sin2x)/(2cosx) בתחום [0,2π]; חורים, קיצון, מספר פתרונות ושטח.',steps:[
+'א. לאחר צמצום: f(x)=cosx+sinx בתחום x≠π/2,3π/2 ⟵ שתי אי־רציפויות סליקות ("חורים"): (π/2,1) ו־(3π/2,−1) — אין אסימפטוטות אנכיות. חיתוכים: (3π/4,0), (7π/4,0), (0,1).',
+'ב. f\u2032=cosx−sinx; קיצון: (π/4,√2) מקסימום, (5π/4,−√2) מינימום; קצוות: (0,1) מינימום, (2π,1) מקסימום.',
+'ג. f(x)=k עם פתרון יחיד: k=√2, k=−√2, וגם k=−1 (הישר פוגע ב־x=π בלבד — הנקודה השנייה היא החור).',
+'ד. שטח בין גרף הנגזרת לציר בין 3π/4 ל־5π/4: |f(5π/4)−f(3π/4)|=|−√2−0|=√2.']},
+            {n:'8',topic:'בעיית קיצון — שטח משולש',brief:'f(x)=x³, g(x)=√(x³); נקודה A על f, AB מקביל לציר x אל g; מקסימום שטח OAB.',steps:[
+'א. תחום g: x≥0; חיתוכים: x³=x^{3/2} ⟵ x⁶=x³ ⟵ (0,0) ו־(1,1).',
+'ב. A(t,t³); על g: x^{3/2}=t³ ⟵ B(t²,t³) ⟵ AB=t−t² (בתחום 0<t<1).',
+'ג. S(t)=½·AB·גובה=½(t−t²)·t³=½(t⁴−t⁵); S\u2032=½(4t³−5t⁴)=0 ⟵ t=0.8; S(0.8)=128/3125 (S\u2033<0 — מקסימום).',
+'ד. AB=t−t² מקסימלי ב־t=0.5 — לא באותו t של השטח (0.8), ולכן שטח מקסימלי ואורך מקסימלי אינם מתקבלים יחד.']}
+          ]
+        },
+        {
           year: 'חורף תשפ״ה (2025)',
           pdf: 'https://meyda.education.gov.il/sheeloney_bagrut/2025/1/HEB/35571.pdf',
           status: 'ready',
@@ -1573,6 +1658,71 @@ window.BAGRUT = {
     {
       code: '35572', nick: 'שאלון 572', level: '5 יח״ל · שאלון שני',
       years: [
+        {
+          year: 'קיץ תשפ״ד (2024) · מועד א',
+          pdf: 'https://files.geva.co.il/geva_website/uploads/2024/05/%D7%A4%D7%AA%D7%A8%D7%95%D7%9F-572.pdf',
+          status: 'ready',
+          questions: [
+            {n:'1',topic:'מקום גיאומטרי — שני מעגלים ומשיקים שווים',brief:'מעגל K(3,4) r=3 ומעגל L(−5,2) r=1; M עם משיקים שווים; פרבולה דרך M.',steps:[
+'א. MA=MB ⟵ פיתגורס: MK²−9=ML²−1 ⟵ לאחר פתיחה: y=−4x−3 — קו ישר.',
+'ב(1). m_KL=2/8=¼ ו־(−4)·¼=−1 ⟵ מאונכים. (2) MK²=MA²+9>MB²+1=ML² תמיד ⟵ אין M עם MK=ML (וגם: אמצע KL, (−1,3), אינו על הישר).',
+'ג. |KL|=2√17; S=9 ⟵ מרחק M מ־KL הוא 9/√17; KL: x−4y+13=0; הצבת M(m,−4m−3) מעל הישר: 17m+25=−9 ⟵ M(−2,5).',
+'ד. y²=2px דרך (−2,5): p=−6.25 ⟵ y²=−12.5x; משיק: yy₀=p(x+x₀) ⟵ y=−1.25x+2.5.']},
+            {n:'2',topic:'וקטורים — ישרים, מישור ופירמידה',brief:'ℓ₁: x=t(1,−3,0), ℓ₂: x=(1,3,0)+m(0,k,1)... נקודת חיתוך, זווית, מישור ונפח.',steps:[
+'א. השוואה: m=0, t=1 ⟵ A(1,−3,0).',
+'ב. cos∠=|3k|/(√10·√(k²+1))=3√2/5 ⟵ 7.2(k²+1)=9k²? ⟵ k²=4 ⟵ k=2 (בדיקה: 6/√50=3√2/5 ✓).',
+'ג. הראשית על ℓ₁ ⟵ d=0; נורמל n⊥(1,−3,0) ו־⊥(0,2,1) ⟵ n=(3,1,−2) ⟵ המישור 3x+y−2z=0.',
+'ד. B על ℓ₂⊂α, A=ℓ₁∩ℓ₂ ו־O על ℓ₁⊂α ⟵ שלוש הנקודות במישור ⟵ המשולש AOB מוכל בו.',
+'ה. AS על הנורמל: |AS|=n√14; AO=AB=√10, sin∠OAB=√7/5 ⟵ S_AOB=√7; V=⅓·√7·√14·n=14√2/3 ⟵ n=±2 ⟵ S(7,−1,−4) או S(−5,−5,4).']},
+            {n:'3',topic:'מרוכבים — מעוין והופכיים',brief:'מעוין שאלכסוניו נחתכים בראשית, BD=2AC; המרובע של ההופכיים; w̄=w¹¹.',steps:[
+'א. חציית האלכסונים ⟵ קודקודים נגדיים; ניצבות ⟵ סיבוב 90°: z_B=2iz, z_C=−z, z_D=−2iz.',
+'ב(1). 1/z=(1/r)cis(−θ) וכן הלאה עם ∓90°,−θ−180°. (2) גם להופכיים: אלכסונים חוצים ומאונכים ⟵ מעוין; אורכיהם 2/r ו־1/r ⟵ S=1/r².',
+'ג. r¹¹cis(11θ)=r·cis(−θ) ⟵ r=1, 12θ=360°k ⟵ 12 שורשים בסדרה הנדסית שמנתה cis30°; שישה זוגות נגדיים ⟵ סכום 0.',
+'ד. מצולע משוכלל בן 12 על מעגל היחידה: S=12·½·sin30°=3; דרישה 1/r²=3 ⟵ r=√3/3.']},
+            {n:'4',topic:'חדו״א — פונקציה מעריכית־רציונלית עם פרמטר',brief:'f(x)=(eˣ−b)/(eˣ−4)²; אסימפטוטות, b מקיצון ב־ln12, ו־g=1/f.',steps:[
+'א. תחום x≠ln4; y=0 מימין, y=−b/16 משמאל, x=ln4 אנכית; חיתוכים (ln b,0) ו־(0,(1−b)/9)? ⟵ (0,−(b−1)/9).',
+'ב. f′=0 ב־ln12: 64=16(12−b) ⟵ b=8; f(ln12)=4/64=1/16 — מקסימום (מהאסימפטוטות y=0, y=−0.5 וחיתוך (ln8,0)).',
+'ג. g=1/f: תחום x≠ln4, x≠ln8; מינימום (ln12,16); אסימפטוטות x=ln8 ו־y=−2 (משמאל); "חור" ב־(ln4,0); חיתוך (0,−9/7).',
+'ה. f=g ⟺ f²=1; מכיוון ש־f≤1/16 — רק f=−1 ⟵ שתי נקודות חיתוך על y=−1.',
+'ו. בתחום [−2,−1]: 0<f−g<1.5 (חסום בין y=−0.5 ל־y=−2) ⟵ האינטגרל חיובי וקטן מ־1½.']},
+            {n:'5',topic:'חדו״א — לוגריתמים, שטחים ואנטי־נגזרת יפה',brief:'f(x)=x·ln²x−2x·lnx+2x; g=ln²x−4; h=f/x².',steps:[
+'א. f′=ln²x≥0 ⟵ עולה תמיד (x>0); f″=2lnx/x ⟵ פיתול (1,2); ל־f′ מינימום (1,0).',
+'ג. f=x[(lnx−1)²+1]>0 לכל x>0 — אין חיתוך עם הציר.',
+'ה. g=0 ⟵ x=e±². ∫ln²x dx = f(x) בדיוק! ⟵ S=∫(4−ln²x)=[4x−f(x)] בין e⁻² ל־e² = 2e²+6/e².',
+'ו. h=(ln²x−2lnx+2)/x; קדומה: ln³x/3−ln²x+2lnx ⟵ בין e⁻² ל־e²: 8/3−(−8/3−8)=13⅓; סה״כ השטח בין הגרפים: 2e²+6/e²+13⅓.']}
+          ]
+        },
+        {
+          year: 'קיץ תשפ״ג (2023) · מועד א',
+          pdf: 'https://files.geva.co.il/geva_website/uploads/2023/05/%D7%A4%D7%AA%D7%A8%D7%95%D7%9F-35572.pdf',
+          status: 'ready',
+          questions: [
+            {n:'1',topic:'גאומטריה אנליטית — אליפסה, פרבולה ומעגל',brief:'אליפסה x²/144+y²/(144−4k²)=1; פרבולה עם מוקד משותף; מעגל שקוטרו AF₁ משיק ל־5x+12y=138.',steps:[
+'א. c²=144−(144−4k²)=4k² ⟵ מוקדים (±2k,0).',
+'ב. מוקד הפרבולה (2k,0) ⟵ p=4k, מדריך x=−2k; AF₁=10k ⟵ x_A+2k=10k ⟵ A(8k,8k) (רביע ראשון, y²=8k·8k).',
+'ג. מרכז M(5k,4k), R=5k; מרחק M מהישר: |73k−138|/13=5k ⟵ 138k=138 ⟵ k=1 (הפתרון 17.25 נפסל: k<6).',
+'ד. הצבת A(8,8): 64/144+64/140≈0.91<1 ⟵ A בתוך האליפסה ⟵ AF₁+AF₂<2a=24 ⟵ היקף F₁AF₂=14+2√41≈26.81 < היקף F₁DF₂=28.']},
+            {n:'2',topic:'וקטורים — קובייה במרחב',brief:'קובייה ABCDA′B′C′D′ במקצוע a; אנך למישור, מפגש תיכונים, ומעבר לקואורדינטות.',steps:[
+'א. עם u=AB, v=AD, w=AA′: CA′=−u−v+w; CA′·BD=u²−v²=0, CA′·BC′=w²−v²=0 ⟵ CA′ מאונך לשני וקטורים בלתי־תלויים במישור BC′D ⟵ אנך למישור.',
+'ב(1). BE=⅓(BD+BC′) ⟵ CE=−⅓u−⅓v+⅓w. (2) CA′=3·CE ⟵ C, E, A′ על ישר אחד (CE:EA′=1:2).',
+'ג. מ־AD·CD=0: 12+4n=0 ⟵ n=−3; |AD|=5 ⟵ p=0 ⟵ A(4,−3,0), וכל z=0 ⟵ ABCD במישור xy; C′=C+(0,0,5)=(3,4,5).',
+'ד. B=C+DA=(7,1,0); ישר החיתוך: x=(7,1,0)+m(−4,3,5) (על BC′).',
+'ה. מוסיפים וקטור כיוון (1,0,0): x=(7,1,0)+m(−4,3,5)+n(1,0,0); בדיקה: z=0 ⟵ m=0 ⟵ y=1≠0 ⟵ אין חיתוך עם ציר x.']},
+            {n:'3',topic:'מספרים מרוכבים',brief:'פתרונות z³=1/z̄³ על מעגל היחידה; משולש ABC משלושה כפולות של z₀; חזקה מדומה טהורה.',steps:[
+'א. הפתרונות — שורשי היחידה השישיים על x²+y²=1; ברביע הרביעי: z₀=cis300°=½−(√3/2)i.',
+'ב. A=d·z₀ (300°), B=d·i·z₀ (30°), C=d·z₀⁴ (120°) ⟵ A ו־C אנטיפודיים ⟵ AC קוטר 2d ו־OB⊥AC גובה d ⟵ שטח d²=5d+6 ⟵ (d−6)(d+1)=0 ⟵ d=6.',
+'ג. w=(z₀)²·(1/z₀²−?)·(1+i) — לאחר הפישוט: w=√3(1−i) ⟵ |w|=√6, arg(w)=−45°.',
+'ד. wⁿ מדומה טהור: −45n≡90 (mod 180) ⟵ n=2,6,10,…; מחוץ למעגל שרדיוסו 6: (√6)ⁿ>6 ⟵ n>2 ⟵ n=6 המינימלי.']},
+            {n:'4',topic:'חדו״א — פונקציות מעריכיות עם פרמטר',brief:'f(x)=(eˣ−1)ⁿ−4; אסימפטוטות וקיצון לפי זוגיות n; חיתוך עם g=3eˣ−7, שטח וערך מוחלט.',steps:[
+'א(1). x→−∞: (eˣ−1)ⁿ→(−1)ⁿ ⟵ אסימפטוטה y=−3 ל־n זוגי, y=−5 לאי־זוגי. (2) f′=n(eˣ−1)ⁿ⁻¹eˣ מתאפסת ב־x=0: זוגי ⟵ מינימום (0,−4); אי־זוגי ⟵ פיתול עם משיק אופקי.',
+'ב(1). n=2: e²ˣ−5eˣ+4=0 ⟵ eˣ=1,4 ⟵ (0,−4), (ln4,5). (2) g מעל f ⟵ S=∫₀^{ln4}(−e²ˣ+5eˣ−4)=[−e²ˣ/2+5eˣ−4x]=7.5−4ln4≈1.955.',
+'ג(1). h=|f|: "שפיץ"־מינימום היכן ש־f=0: (eˣ−1)²=4 ⟵ eˣ=3 ⟵ (ln3,0); ומקסימום (0,4). (2) y=k חותך ב־3 נקודות ⟵ 3<k<4.']},
+            {n:'5',topic:'חדו״א — לוגריתמים ואינטגרל',brief:'f(x)=ln x+1/x; g(x)=(x+1)(1−ln x); הקשר g′=−f, קעירויות ושטח.',steps:[
+'א. תחום x>0; f′=(x−1)/x² ⟵ מינימום (1,1); סקיצה עם אסימפטוטה x=0.',
+'ב(1). חיתוך עם הציר: 1−ln x=0 ⟵ (e,0) (x=−1 מחוץ לתחום). (2) g′=−ln x−1/x=−f(x)<0 לכל x>0 ⟵ g יורדת תמיד. (3) g″=−f′ ⟵ קעורה מעלה ב־0<x<1, מטה ב־x>1.',
+'ג. h(x)=g′(x)/x=−(ln x)/x−1/x²; S=∫₁^e(−h)=[ln²x/2−1/x]₁^e=(½−1/e)+1=1.5−1/e≈1.132.']}
+          ]
+        },
         { year: 'קיץ תשפ״ה (2025)', pdf: null, status: 'soon' },
         { year: 'קיץ תשפ״ד (2024)', pdf: null, status: 'soon' },
         { year: 'קיץ תשפ״ג (2023)', pdf: null, status: 'soon' }
@@ -20050,15 +20200,9 @@ window.TOPICS = [
       praise: { rate: 1.0,  pitch: 1.18 }
     },
     ok: function () {
-      try { return !!(window.speechSynthesis && window.SpeechSynthesisUtterance); } catch (e) { return false; }
+      return false;   // ההקראה בוטלה לבקשת המשתמש — קולות הדפדפן אינם ברמה מספקת
     },
-    hebVoices: function () {
-      try {
-        return (window.speechSynthesis.getVoices() || []).filter(function (v) {
-          return /^he(-|_|$)/i.test(v.lang) || /עברית|Hebrew/i.test(v.name);
-        });
-      } catch (e) { return []; }
-    },
+    hebVoices: function () { return []; },
     scoreVoice: function (v) {
       var S = (v.name + ' ' + v.lang);
       if (/natural|neural/i.test(S)) return 0;
@@ -20192,29 +20336,11 @@ window.TOPICS = [
       var d = document.createElement('div');
       d.className = 'mascot';
       d.innerHTML = '<div class="mascot-bubble" role="status" aria-live="polite"></div>' +
-                    '<button class="mascot-btn" aria-label="פִיבּוֹ הַשּׁוּעָל — לַחֲצוּ לְעִדּוּד">\u{1F98A}</button>' +
-                    '<button class="mascot-voice" aria-label="הַחְלָפַת קוֹל הַהַקְרָאָה" title="הַחְלָפַת קוֹל" hidden>\u{1F399}\uFE0F</button>';
+                    '<button class="mascot-btn" aria-label="פִיבּוֹ הַשּׁוּעָל — לַחֲצוּ לְעִדּוּד">\u{1F98A}</button>';
       root.appendChild(d);
       this.el = d;
       this.bubble = d.querySelector('.mascot-bubble');
       var self = this;
-      var vb = d.querySelector('.mascot-voice');
-      function refreshVoiceBtn() {
-        if (Speech.hebVoices().length >= 2) vb.hidden = false;
-      }
-      refreshVoiceBtn();
-      try { window.speechSynthesis.addEventListener('voiceschanged', refreshVoiceBtn); } catch (e) {}
-      vb.addEventListener('click', function () {
-        var heb = Speech.hebVoices().sort(function (a, b) { return Speech.scoreVoice(a) - Speech.scoreVoice(b); });
-        if (heb.length < 2) return;
-        var at = 0;
-        for (var i = 0; i < heb.length; i++) if (Speech.voice && heb[i].voiceURI === Speech.voice.voiceURI) at = i;
-        var nv = heb[(at + 1) % heb.length];
-        Speech.setVoice(nv);
-        var nm = nv.name.replace(/Microsoft |Online |\(Natural\)|Google /g, '').trim();
-        self.show('\u{1F399}\uFE0F ' + nm, 3200);
-        Speech.say('שָׁלוֹם! כָּכָה אֲנִי מַקְרִיאָה. נָעִים מְאוֹד.', 'narr');
-      });
       d.querySelector('.mascot-btn').addEventListener('click', function () {
         var t = self.pick(self.TIPS.concat(self.GREET));
         self.show(t, 3600); Speech.say(t, 'fibo');
@@ -20513,6 +20639,7 @@ window.TOPICS = [
       html += '<p class="stats-note">' + cheer + ' \u00B7 \u2B50 מַשִּׂיגִים בַּבֹּחַן \u00B7 \u{1F3F0} בְּמִגְדַּל הַחִידוֹת</p>';
       html += '</section>';
     })();
+    html += '<button class="search-fab" id="searchFab" aria-label="חיפוש נושא">\u{1F50D}</button>';
     html += '<div class="search-wrap"><input id="topicSearch" type="search" placeholder="\u{1F50E} חִפּוּשׂ נוֹשֵׂא... (שֶׁבֶר, זָוִית, פִּיתָגוֹרָס)" aria-label="חיפוש נושא"><span id="searchCount"></span></div>';
     html += '<div class="trail-wrap"><div class="trail">';
 
@@ -20583,6 +20710,11 @@ window.TOPICS = [
       });
       sc.textContent = q ? ('נִמְצְאוּ ' + n) : '';
     });
+    var fab = document.getElementById('searchFab');
+    if (fab) fab.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(function () { if (si) si.focus(); }, 350);
+    });
     // 🦊 פיבו במסלול — מגיב להתקדמות
     var pctLine = trailPct === 0 ? 'הַמַּסָּע מְחַכֶּה לָכֶם! בּוֹאוּ נַתְחִיל!' :
                   trailPct < 25 ? 'הִתְחַלְתֶּם יָפֶה! מַמְשִׁיכִים?' :
@@ -20636,7 +20768,7 @@ window.TOPICS = [
     var gate = GATE_META[w.gate] || { name: '' };
     var L = w.labels || {};
 
-    var html = '<section class="world" data-age="' + (w.ageProfile || 'b') + '" style="--wc:' + w.color + '">';
+    var html = '<section class="world' + (w.early ? ' early' : '') + '" data-age="' + (w.ageProfile || 'b') + '" style="--wc:' + w.color + '">';
     html += '<button class="back" id="backBtn">\u2192 ' + escapeHtml(L.back || 'חזרה למסלול') + '</button>';
     html += '<div class="world-head"><div class="world-icon">' + w.icon + '</div>';
     html += '<div><div class="world-eyebrow">' + gate.name + ' · שלב ' + worldNumber(idx) + '</div>';
@@ -21282,6 +21414,7 @@ window.TOPICS = [
     html += '<button class="bg-back" id="bgBackHome">\u2192 חזרה למסע</button>';
     html += '<h1 class="bg-title">\u{1F393} חדר הבגרויות — פתרונות מלאים</h1>';
     html += '<p class="bg-intro">' + B.intro + '</p>';
+    html += '<a class="bg-pdf" href="matematikal-solutions.pdf" target="_blank">\u{1F4C4} חוֹבֶרֶת כָּל הַפִּתְרוֹנוֹת \u2014 PDF לְהוֹרָדָה וּלְהַדְפָּסָה</a>';
     B.quest.forEach(function (q, qi) {
       html += '<div class="bg-qsec"><div class="bg-qsec-head"><b>' + q.nick + '</b><span>' + q.level + ' \u00B7 ' + q.code + '</span></div>';
       html += '<div class="bg-grid">';
@@ -21296,6 +21429,14 @@ window.TOPICS = [
     });
     html += '<p class="bg-note">המשבצות "בהכנה" מתמלאות בסבבים הבאים — 2-3 מבחנים בכל פעם, עד 15/15.</p>';
     html += '</div>';
+    html += '<article class="card roadmap"><h2>\u{1F9ED} נוֹשְׂאִים בַּדֶּרֶךְ — הָעוֹלָמוֹת הַבָּאִים</h2><ul class="roadmap-list">' +
+      '<li>\u222B אִינְטֶגְרָלִים וְחִשּׁוּב שְׁטָחִים <span>נִדְרָשׁ בִּשְׁאֵלוֹנֵי 4\u20135 יְחִידוֹת</span></li>' +
+      '<li>\u{1F4C8} בְּעָיוֹת קִיצוֹן (מִינִימוּם/מַקְסִימוּם) <span>לֵב שְׁאֵלוֹנֵי 481/581</span></li>' +
+      '<li>\u{1F50E} חֲקִירַת פוּנְקְצִיּוֹת רַצְיוֹנָלִיּוֹת וְשֹׁרֶשׁ <span>חוֹבָה בְּ־5 יְחִידוֹת</span></li>' +
+      '<li>\u{1F4D0} טְרִיגוֹנוֹמֶטְרִיָּה בַּמֶּרְחָב <span>שְׁאֵלוֹן 571/581</span></li>' +
+      '<li>\u{1F489} לוֹגָרִיתְמִים וּמַעֲרִיכִיּוֹת <span>גְּדִילָה וּדְעִיכָה \u2014 471/571</span></li>' +
+      '<li>\u{1F4B0} רִבִּית דְּרִבִּית וּמַתֵּמָטִיקָה פִינַנְסִית <span>שְׁאֵלוֹנֵי 3 יְחִידוֹת</span></li>' +
+      '</ul><p class="roadmap-note">הָרְשִׁימָה נִגְזְרָה מִנִּתּוּחַ הַשְּׁאֵלוֹנִים מוּל 49 הָעוֹלָמוֹת הַקַּיָּמִים \u00B7 יִבָּנוּ בְּהֶמְשֵׁךְ</p></article>';
     root.innerHTML = html;
     document.getElementById('bgBackHome').addEventListener('click', renderHome);
     Array.prototype.forEach.call(root.querySelectorAll('.bg-card:not(.soon)'), function (b) {
@@ -21343,7 +21484,7 @@ window.TOPICS = [
     if (!host) return;
     var pool = [].concat(w.quiz || [], w.illustrated || []).filter(function (q) { return q && q.options; });
     if (pool.length < 3) { host.innerHTML = ''; return; }
-    var N = Math.min(6, pool.length), TIME = 12;
+    var N = Math.min(6, pool.length), TIME = w.early ? 20 : 15;
     var qs = [], score = 0, at = -1, timer = null, left = 0, answered = false;
     var bestKey = 'bz_' + w.id;
     function best() { return (State.bestScores && State.bestScores[bestKey]) || 0; }
